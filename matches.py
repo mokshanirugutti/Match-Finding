@@ -41,7 +41,7 @@ def reset():
 	button_list = [b0,b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11]
 	# Loop thru buttons and change colors
 	for button in button_list:
-		button.config(text=" ", bg="SystemButtonFace", state="normal")
+		button.config(text=" ", bg="white", state="normal")
 
 
 
@@ -51,7 +51,7 @@ def win():
 	button_list = [b0,b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11]
 	# Loop thru buttons and change colors
 	for button in button_list:
-		button.config(bg="yellow")
+		button.config(bg="green")
 
 
 
@@ -72,7 +72,7 @@ def button_click(b, number):
 	# Start to determine correct or not
 	if len(answer_list) == 2:
 		if matches[answer_list[0]] == matches[answer_list[1]]:
-			my_label.config(text="MATCH!")
+			my_label.config(text="Great Keep going")
 			for key in answer_dict:
 				key["state"] = "disabled"
 			count = 0
@@ -87,7 +87,7 @@ def button_click(b, number):
 			count = 0
 			answer_list = []
 			# pop up box
-			messagebox.showinfo("Incorrect!", "Incorrect")
+			messagebox.showinfo("Incorrect!", "Different match \n Try again")
 
 			# Reset the buttons
 			for key in answer_dict:
